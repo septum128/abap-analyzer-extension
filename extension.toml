@@ -1,0 +1,10 @@
+id = "abap-analyzer"
+name = "ABAP Analyzer"
+version = "0.1.0"
+schema_version = 1
+authors = ["セプタム <septum128@gmail.com>"]
+description = "ABAP language support powered by abap-language-server"
+
+[language_servers.abap-language-server]
+name = "ABAP Language Server"
+languages = ["ABAP"]

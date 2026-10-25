@@ -1,0 +1,3 @@
+name = "ABAP"
+path_suffixes = ["abap"]
+line_comments = ["\" ", "* "]
