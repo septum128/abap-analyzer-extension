@@ -7,6 +7,7 @@
 - 定義へのジャンプ
 - ホバー
 - シンタックスハイライト
+- アウトライン
 
 ## 必要なもの
 
@@ -27,13 +28,19 @@ cargo install --path .
 
 ## 設定
 
-シンタックスハイライトは、言語サーバーのセマンティックトークンで行います。Zed では既定で無効なので、settings.json で有効にしてください。
+シンタックスハイライトとアウトラインは、言語サーバーから取ります。
+
+- シンタックスハイライト: セマンティックトークン
+- アウトライン: ドキュメントシンボル
+
+どちらも Zed では既定で無効なので、settings.json で有効にしてください。
 
 ```json
 {
   "languages": {
     "ABAP": {
-      "semantic_tokens": "full"
+      "semantic_tokens": "full",
+      "document_symbols": "on"
     }
   }
 }
@@ -49,7 +56,7 @@ cargo install --path .
 | `languages/abap/config.toml` | 言語 ABAP（拡張子 `.abap`、行コメント `"` と `*`） |
 | `src/lib.rs` | `PATH` から `abap-language-server` を探して起動する |
 
-Tree-sitter の文法は含めていません。そのため、括弧の対応やアウトライン表示は使えません。
+Tree-sitter の文法は含めていません。そのため、括弧の対応は使えません。
 
 ## Windows + WSL で使う場合
 
