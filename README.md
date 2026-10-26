@@ -57,3 +57,7 @@ Tree-sitter の文法は含めていません。そのため、括弧の対応�
 - `\\wsl.localhost\...` のフォルダを Windows の Zed で直接ビルドすると、インクリメンタルコンパイルのロックファイルを作れずに失敗します。
   - `Cargo.toml` の `[profile.dev] incremental = false` は、その対策です。
   - それでも失敗する場合は、Windows 側のフォルダ（例: `C:\Dev\abap-analyzer-extension`）にコピーしてからインストールしてください。
+
+## ライセンス
+
+[MIT](LICENSE)
